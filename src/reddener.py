@@ -7,9 +7,11 @@ import util
 def get_args():
     parser = ArgumentParser(prog="reddener")
 
-    parser.add_argument("--input", type=FileType("r"), default=stdin.buffer,
+    parser.add_argument("-i", "--input", type=FileType("r"),
+        default=stdin.buffer,
         help="Input table.")
-    parser.add_argument("-f", "--format", type=str, default="%.8f",
+    parser.add_argument("-f", "--format", type=str,
+        default="%.8f",
         help="Output format specifier")
 
     args = parser.parse_args()
